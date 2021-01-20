@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
-  template: `
-    <app-header></app-header>
-    <div class="container mt-2">
-      <router-outlet></router-outlet>
-    </div>
-    <app-footer></app-footer>
-  `,
+  /*template: `
+    `,*/
+  templateUrl: 'dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
   constructor() {}

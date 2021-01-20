@@ -9,15 +9,11 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HomeComponent implements OnInit {
   name: string = '';
   email: string = '';
-  counter: number = 0;
   constructor(private authService: AuthService) {}
   ngOnInit(): void {
     this.authService.info().subscribe((res: any) => {
       this.name = res.name;
       this.email = res.email;
     });
-    setInterval(() => {
-      this.counter++;
-    }, 1000);
   }
 }
